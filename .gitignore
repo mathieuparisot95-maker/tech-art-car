@@ -1,0 +1,5 @@
+design_pkg/
+design.tar.gz
+.vercel
+.DS_Store
+node_modules/
