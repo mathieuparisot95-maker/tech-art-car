@@ -8,8 +8,8 @@
   --ink-3:rgba(245,243,238,.40);
   --red:#E10600;
   --red-2:#FF1A0E;
-  --accent:#C8A24B;
-  --accent-soft:rgba(200,162,75,.18);
+  --accent:#C7C7C7;
+  --accent-soft:rgba(199,199,199,.18);
   --display:"Saira Condensed", ui-sans-serif, system-ui, sans-serif;
   --sans:"Manrope", ui-sans-serif, system-ui, sans-serif;
   --mono:"JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
@@ -183,7 +183,7 @@ img,svg{display:block;max-width:100%}
   font-family:var(--mono);font-size:11px;color:var(--ink-3);letter-spacing:.14em;text-transform:uppercase;
 }
 .hero-card-tag .live{display:inline-flex;align-items:center;gap:8px;color:var(--accent)}
-.hero-card-tag .live::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(200,162,75,.18)}
+.hero-card-tag .live::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}
 
 .hero-car-ph{
   flex:1;margin:14px 0;position:relative;overflow:hidden;
