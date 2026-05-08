@@ -68,6 +68,45 @@ img,svg{display:block;max-width:100%}
 .btn .arrow{display:inline-block;width:14px;height:1px;background:currentColor;position:relative}
 .btn .arrow::after{content:"";position:absolute;right:0;top:-3px;width:7px;height:7px;border-right:1px solid currentColor;border-top:1px solid currentColor;transform:rotate(45deg)}
 
+/* proposal banner (above topbar — scrolls away with the page) */
+.promo-bar{
+  display:flex;align-items:center;justify-content:center;gap:16px;
+  padding:11px 24px;
+  background:linear-gradient(90deg, #161616 0%, #0d0d0d 50%, #161616 100%);
+  border-bottom:1px solid var(--line);
+  font-family:var(--mono);font-size:11px;letter-spacing:.08em;
+  color:var(--ink-2);text-transform:uppercase;text-align:center;
+  position:relative;z-index:60;line-height:1.4;
+  transition:background .3s ease;
+}
+.promo-bar::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:repeating-linear-gradient(135deg, transparent 0 22px, rgba(225,6,0,.04) 22px 23px);
+}
+.promo-bar:hover{background:linear-gradient(90deg, #1c1c1c 0%, #121212 50%, #1c1c1c 100%)}
+.promo-bar > *{position:relative}
+.promo-bar-pill{
+  background:var(--red);color:#fff;
+  padding:3px 9px;font-size:10px;font-weight:700;letter-spacing:.18em;
+  flex-shrink:0;
+}
+.promo-bar-text{color:var(--ink-2)}
+.promo-bar-text strong{color:var(--ink);font-weight:600;letter-spacing:.06em}
+.promo-bar-cta{
+  display:inline-flex;align-items:center;gap:6px;
+  color:var(--accent);font-weight:600;letter-spacing:.14em;
+}
+.promo-bar-arrow{display:inline-block;transition:transform .3s cubic-bezier(.22,.61,.36,1)}
+.promo-bar:hover .promo-bar-arrow{transform:translateX(5px)}
+@media (max-width:880px){
+  .promo-bar{font-size:10px;gap:10px;padding:9px 14px;letter-spacing:.04em}
+  .promo-bar-pill{font-size:9px;padding:2px 7px;letter-spacing:.14em}
+}
+@media (max-width:560px){
+  .promo-bar{flex-direction:column;gap:6px;padding:10px 14px;text-align:center}
+  .promo-bar-text{font-size:10px}
+}
+
 /* topbar */
 .topbar{
   border-bottom:1px solid var(--line);
